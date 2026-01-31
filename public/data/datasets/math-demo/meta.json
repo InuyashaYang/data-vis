@@ -1,0 +1,13 @@
+{
+  "id": "math-demo",
+  "name": "Math Annotation Demo",
+  "description": "Demo dataset showing prompt/answer/solution in Markdown with LaTeX.",
+  "fields": {
+    "prompt_md": "Question prompt in Markdown (may contain LaTeX)",
+    "answer_md": "Short answer in Markdown (may contain LaTeX)",
+    "solution_md": "Long-form solution in Markdown (may contain LaTeX)",
+    "topics": "Array of topic tags",
+    "difficulty": "easy | medium | hard",
+    "status": "draft | reviewed | accepted"
+  }
+}

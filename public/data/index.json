@@ -1,0 +1,13 @@
+{
+  "datasets": [
+    {
+      "id": "math-demo",
+      "name": "Math Annotation Demo",
+      "description": "A tiny demo dataset for math markdown rendering.",
+      "tags": ["math", "markdown"],
+      "taskType": "math-solution",
+      "sampleCount": 3,
+      "updatedAt": "2026-01-31"
+    }
+  ]
+}
