@@ -10,12 +10,12 @@ function normalizeLatex(md: string) {
   let s = md
 
   // Control chars that commonly appear when backslashes were not escaped in JSON.
-  s = s.replace(/\f(?=rac\b)/g, '\\frac')
+  // "\f" in JSON becomes a form-feed control char in the parsed string.
   s = s.replace(/\f(?=rac)/g, '\\frac')
 
   // Replace remaining form-feed/backspace chars with a backslash.
   s = s.replace(/\f/g, '\\')
-  s = s.replace(/\b/g, '\\')
+  s = s.replace(/\x08/g, '\\')
 
   // Also recover cases where the backslash is stripped entirely (e.g. "frac{a}{b}").
   s = s.replace(/(^|[^\\])frac\{/g, '$1\\frac{')
